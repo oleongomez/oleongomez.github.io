@@ -20,10 +20,12 @@
 
 </head>
 
-<body onload("animate()")>
-    <div class="container">
-    <div class="overlay" id="animation"></div>
-    <div class="content grid-container position-absolute top-50 start-0 translate-middle-y"">  
+<body onload="animate" onresize="animate">
+  <div class="container">
+    <div class="overlay" id="animation">
+    </div>
+    <div class="content">
+    <div class="grid-container position-absolute top-50 start-0 translate-middle-y">
       <div class="card bg-transparent p-5 rounded mt-3">
         <div class="card-body">
           <h1 class="card-title" id="name">Oscar De Leon Gomez</h1>
@@ -34,6 +36,7 @@
       <div class="card" id="face">
         <img class="card-img" src="./biopic1.jpg" />
       </div>
+    </div>
     </div>
   </div>
   <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
