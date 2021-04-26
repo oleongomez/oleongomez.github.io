@@ -9,6 +9,7 @@ const create_square = (vertical_boundary, horizontal_boundary) => {
     div.style.left = position_x + 'px';    
     div.style.top = position_y + 'px';    
     div.style.borderRadius = '50%'; 
+    console.log("Position: ",position_x,position_y)
     return {
       position_x: position_x,
       position_y: position_y,
@@ -41,15 +42,15 @@ const create_square = (vertical_boundary, horizontal_boundary) => {
   const create_squares = (number_of_squares) => {
       var animation = document.getElementById('animation')
       for(let i=0;i<number_of_squares; ++i){
-          console.log(document.body.clientWidth, document.body.offsetHeight)
-          var square = create_square(document.body.clientWidth, document.clientHeight)
+          console.log(animation.clientWidth, animation.clientHeight)
+          var square = create_square(animation.clientWidth, animation.clientHeight)
           squares.push()
           animation.appendChild(square.div)
       }
 
 
   }
-  create_squares(100)
+  create_squares(500)
   const animate = () => {
 
   }
