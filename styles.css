@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 body {
   margin: 0;
   padding: 0;
@@ -45,13 +46,14 @@ body {
 }
 
 .square {
-    position:absolute;
+    position: absolute;
     width: 5px;
     height: 5px;
     margin: 1px;
     border: 1px solid rgba(245, 242, 242, 0.2);
     border-radius: 50%;
-  }
+    background-color: rgba(245, 242, 242, 0.2);
+}
 #animation{
     z-index: 0;
 }
