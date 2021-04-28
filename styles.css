@@ -24,7 +24,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   font-size: xx-large;
 }
@@ -71,5 +71,9 @@ body {
     left: 0;
     top: 0;
     background: rgba(51,51,51,0.7);
-    z-index: 0;
+    z-index: -1;
+}
+
+.modals{
+  background-color: #212529;
 }

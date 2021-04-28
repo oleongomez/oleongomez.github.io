@@ -34,7 +34,6 @@ const create_square = (vertical_boundary, horizontal_boundary, id) => {
   };
   
   const move = (square) => {
-      console.log('move')
       square.position_x += square.velocity_x * square.direction_x;
       square.position_y += square.velocity_y * square.direction_y;
     square.div.style.left = square.position_x+"px";

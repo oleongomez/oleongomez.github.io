@@ -4,18 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.82.0">
-  <title>My portfolio</title>
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-bottom/">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-  <!-- Bootstrap core CSS -->
-  <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="./styles.css" rel="stylesheet">
-
+  <title>My portfolio</title>
 </head>
 
 <body onload="animate" onresize="animate">
@@ -23,18 +18,24 @@
     <div class="overlay" id="animation">
     </div>
     <div class="content">
-    <div class="grid-container position-absolute top-50 start-0 translate-middle-y">
-      <div class="card bg-transparent p-5 rounded mt-3">
-        <div class="card-body">
-          <h1 class="card-title" id="name">Oscar De Leon Gomez</h1>
-          <p class="card-subtitle lead">Full Stack Software Engineer</p>
-          <p class="card-text lead">Hi, I work across the stack from Irvine, CA</p>
+      <div class="grid-container position-absolute top-50 start-0 translate-middle-y">
+        <div class="card bg-transparent p-5 rounded mt-3">
+          <div class="card-body">
+            <h1 class="card-title" id="name">Oscar De Leon Gomez</h1>
+            <p class="card-subtitle lead">Full Stack Software Engineer</p>
+            <p class="card-text lead">Hi, I work across the stack from Irvine, CA</p>
+          </div>
+        </div>
+        <div class="card" id="face">
+          <img class="card-img" src="./biopic1.jpg" />
+        </div>
+        <div class="card" id="video">
+          <iframe width="560" height="100%" src="https://www.youtube.com/embed/pMnwaNwfH2s" title="My video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
       </div>
-      <div class="card" id="face">
-        <img class="card-img" src="./biopic1.jpg" />
-      </div>
-    </div>
     </div>
   </div>
   <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
@@ -47,7 +48,14 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contact me</a>
+            <a href="#" class="nav-link active" data-bs-toggle="modal" data-bs-target="#contactmodal">
+              Contact me
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active" data-bs-toggle="modal" data-bs-target="#aboutmodal">
+              About me
+            </a>
           </li>
           <li class="nav-item dropup">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-bs-toggle="dropdown"
@@ -62,8 +70,54 @@
       </div>
     </div>
   </nav>
-
-  <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.bundle.min.js"></script>
+  <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="contactmodallabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modals">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactmodallabel">Contact me</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><a class="link-light" href="www.linkedin.com/in/oscarantoniodeleongomez">Follow me on Linkedin</a></p>
+          <p><a class="link-light" href="https://www.facebook.com/odeleongomez">Follow me on Facebook</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="aboutmodal" tabindex="-1" aria-labelledby="aboutmodallabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modals">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutmodallabel">About me</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Hi I am Oscar De Leon Gomez and I will be your full stack engineer.<br>
+            My main area of expertise is in the automotive industry where I have almost 10 years of experience in
+            in-vehicle diagnostics
+            and software development and archtecture for manufacturing electronic testing of vehicles.
+          </p>
+          <p>This are the programming languajes I have worked with:
+          <ul>
+            <li>C/C++</li>
+            <li>Java</li>
+            <li>Python</li>
+          </ul>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
   <script src="background.js"></script>
 
 
